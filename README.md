@@ -1,115 +1,156 @@
-# TinyTroupe Participatory
+# 参加型LLMマルチエージェントシミュレーション環境
 
-**参加型LLMマルチエージェントシミュレーションの設計と実装**
+**Design and Implementation of a Participatory LLM Multi-Agent Simulation Environment**
 
-B4（2025年度）研究プロジェクト
+岡山大学 工学部 情報工学コース 知的コンピューティング学研究室
+特別研究（令和7年度） — 小田 晴大
+指導教員: 林 冬惠 准教授
 
-## 概要
+---
 
-LLMマルチエージェントシミュレーションにおいて、以下の課題に対処するため**参加型（Participatory）アプローチ**を提案・実装したものです。
+## 研究概要
 
-- 長期的な行動の一貫性の欠如
-- 役割からの逸脱
-- 議論の停滞
+大規模言語モデル（LLM）を用いたマルチエージェントシミュレーション（MAS）では、エージェントが完全に自律的に動作するため、役割からの逸脱・議題からの逸脱・ハルシネーションといった問題が生じ、シミュレーションの品質が低下する。
 
-MicrosoftのLLMマルチエージェントシミュレーションフレームワーク [TinyTroupe](https://github.com/microsoft/TinyTroupe) を基盤とし、人間がシミュレーションに介入してエージェントの行動を誘導する仕組みを新たに設計・実装しました。
+本研究では、Microsoft 製のシミュレーション環境 [TinyTroupe](https://github.com/microsoft/TinyTroupe) を基盤とし、Human-in-the-Loop の概念を導入することで、**人間がエージェントの行動生成過程に介入できる参加型シミュレーション環境**を設計・実装した。自律型と参加型の比較評価により、人間の介入がエージェント行動の品質、議論の協調過程、および最終成果物の質を向上させることを示した。
 
-## 参加型アプローチ
+詳細は特別研究報告書「参加型LLMマルチエージェントシミュレーション環境の設計と実装」（令和8年2月）を参照。
 
-エージェントが行動を生成するたびに、人間は以下の2つの選択肢から介入方法を選びます。
+## 設計方針
+
+参加型機構の導入にあたり、以下の3つの方針を採用した。
+
+- **最小限な介入と持続的な効果** — 介入は行動生成過程にのみ与え、その効果は後続の全ての行動生成に持続的に反映される。
+- **選択的介入** — 全ての行動ではなく、逸脱や品質低下が見られた行動にのみ人間が介入する。
+- **エージェントの自律性の尊重** — 事後介入（生成された行動を確認してから介入判断）を採用し、自律的な行動生成能力を活かす。
+
+## 介入機構
+
+エージェントが行動を生成するたびに、人間は以下の2択を選択する。
 
 | 操作 | 説明 |
 |------|------|
-| **ACCEPT** | エージェントの行動をそのまま承認 |
-| **GUIDE** | ガイドラインを入力し、行動を再生成させる |
+| **ACCEPT** | 生成された行動をそのまま承認 |
+| **GUIDE** | ガイドラインを入力し、THINK（内省）の強制を経て行動を再生成 |
 
-GUIDEで蓄積されたガイドラインは、認知科学の**作業記憶（Working Memory）** の目標維持機能をモデル化しており、一度与えた指示が後続の**全ての行動生成に持続的に影響**します。
+GUIDE で与えたフィードバックは **ガイドラインメモリ（Guideline Memory）** としてプロンプトに `system` メッセージとして注入され、シミュレーション終了まで累積的に保持される。これにより、単発の修正に留まらない持続的な行動改善を実現する。
 
-## TinyTroupeからの拡張点
+ガイドラインは（1）役割・議題からの逸脱防止、（2）人間の視点・判断の反映、（3）ハルシネーションの抑制、の3つの目的で用いられる。
 
-### 1. 参加型エージェント（`ParticipatoryTinyPerson`）
+## 評価結果
 
-- `TinyPerson` を継承し、ACCEPT / GUIDE の2択で人間が介入可能なエージェントを実装
-- GUIDE時にはTHINK（内省）アクションを強制生成し、ガイドラインを内面化してから行動を再生成
-- ガイドラインはシステムメッセージとしてプロンプトに注入され、TinyTroupeのEpisodic / Semantic Memoryと整合
-- 既存の `TinyPerson` インスタンスを `convert_to_participatory()` で変換可能
+評価シナリオ: **「スマート研究室案内デモの企画会議」**（オープンキャンパス向け）
 
-### 2. 人間操作エージェント（`HumanControlledPerson`）
+- 3エージェント（Project Manager / Systems Engineer / AI Researcher）による設計会議
+- LLM: `gpt-4o-mini`、5ステップ × 5試行
+- 自律型条件 vs 参加型条件（PM のみに人間が介入）の比較
 
-- `ActionGenerator` を `HumanActionGenerator` に差し替え、人間が直接 TALK / THINK / DONE コマンドで操作するエージェントを実装
+### ミクロ評価（個々のエージェント行動の品質、8項目ルーブリック）
 
-### 3. 3層評価パイプライン（`tinytroupe/evaluation/`）
+5試行平均で参加型条件のスコアが全エージェントで上昇した。
 
-TinyTroupeには存在しなかった体系的な評価モジュールを新規開発しました。
+| エージェント | 自律型 | 参加型 |
+|-------------|-------:|-------:|
+| Project Manager（介入対象） | 約 5.0 | 約 7.2 |
+| Systems Engineer | 約 3.8 | 約 6.2 |
+| AI Researcher | 約 4.4 | 約 5.2 |
 
-| 評価層 | クラス | 手法 | 内容 |
-|--------|--------|------|------|
-| **ミクロ評価** | `MicroEvaluator` | LLM-as-a-judge | エージェント個別の行動品質（役割一貫性・論理的一貫性・議題遵守、各5点満点） |
-| **マクロ評価** | `MacroEvaluator` | TinyTroupeの`ResultsExtractor` + LLM-as-a-judge | シミュレーション全体の成果物品質・合意形成成功率・技術矛盾の検出 |
-| **プロセス指標** | `ProcessMetrics` | LLM不使用の定量計算 | 停滞率（Jaccard類似度ベース）・発散回数（議題との類似度） |
+特に **新規・具体的な提案 (A04)**、**議論の構造化・要約 (A07)**、**次ステップの提示 (A08)** で顕著な改善が見られた。介入対象でない Systems Engineer / AI Researcher も、PM の議論進行改善によりタスク分解が促され、間接的に行動品質が向上した。
 
-`MeetingEvaluator` がこれらを統合実行し、JSON形式で結果を保存します。
+### マクロ評価（シミュレーション全体）
 
-### 4. ペルソナ自動洗練（`refine_persona.py`）
+| 評価対象 | 自律型 | 参加型 |
+|---------|-------:|-------:|
+| 協調過程ルーブリック（6項目） | 平均 3.4/6 | 平均 5.8/6 |
+| 成果物の達成（5項目） | 平均 3.0/5 | 平均 4.8/5 |
 
-シミュレーション履歴をGPT-4oで分析し、エージェントのペルソナ定義（JSON）を自動的に洗練する機能を実装。参加型介入の知見をペルソナ改善に反映し、自律シミュレーションでも活用可能にしました。
+特に **次ステップの明示 (S01)**、**議論要約・チェックポイント (S05)**、**明示的な合意 (S06)** で大きな差が生じた。成果物の具体性（技術要素・体験フロー等）も参加型条件で大幅に向上した。
 
-## プロジェクト構成
+これらの結果から、人間の行動生成過程への介入がエージェント行動の品質向上に留まらず、シミュレーション全体の協調過程と成果物の質の向上にも寄与することを示した。
+
+## 主な実装範囲
+
+★ 印は本研究で新規追加したファイル、無印は TinyTroupe 由来のファイルを示す。
+
+### 参加型機構（本研究の中核）
 
 ```
-├── Tutorial_participatory.py     # 参加型シミュレーションのメインスクリプト
-├── run_autonomous_only.py        # 自律条件シミュレーション実行
-├── refine_persona.py             # ペルソナ自動洗練
-├── *_rubric_evaluation.py        # 各種ルーブリック評価スクリプト
-├── evaluate_refined.py           # 洗練後ペルソナの評価
-├── config.ini                    # モデル・パラメータ設定
-├── agent_specs/                  # エージェントのペルソナ定義（JSON）
-├── evaluation_results/           # 評価結果（JSON）
-├── simulation_results/           # シミュレーション結果
-├── tinytroupe/                   # TinyTroupeフレームワーク（拡張版）
-│   ├── agent/
-│   │   ├── participatory_tiny_person.py   # 参加型エージェント
-│   │   ├── participatory_utils.py         # 変換ユーティリティ
-│   │   ├── human_action_generator.py      # 人間操作用ActionGenerator
-│   │   ├── human_controlled_person.py     # 人間操作エージェント
-│   │   └── ...
-│   ├── evaluation/
-│   │   ├── micro_evaluation.py            # ミクロ評価
-│   │   ├── macro_evaluation.py            # マクロ評価
-│   │   ├── process_metrics.py             # プロセス指標
-│   │   ├── complete_evaluation_pipeline.py # 統合パイプライン
-│   │   └── deliverables.py               # 成果物定義
-│   └── ...
-└── examples/                     # Jupyter Notebookサンプル
+tinytroupe/agent/
+├── ★ participatory_tiny_person.py    # 参加型エージェント（TinyPerson を継承）
+├── ★ participatory_utils.py          # HumanIntervention、変換ユーティリティ
+└── tiny_person.py                    # ベースクラス（TinyTroupe）
 ```
 
-## セットアップ
+`ParticipatoryTinyPerson` は `TinyPerson` を継承し、`HumanIntervention` クラスとの連携で人間介入機構を実現する。`TinyWorld`（環境）は `TinyPerson` のみに依存するため、自律型エージェントと参加型エージェントを同一の環境内で混在させて動作させることができる。
 
-### 1. 環境変数の設定
+### 評価パイプライン（本研究の評価フレームワーク）
+
+`tinytroupe/evaluation/` ディレクトリは全て新規実装。Evidence-Centered Design の考え方に基づき、協調過程の質を観測可能なルーブリックに落とし込んでいる。
+
+```
+tinytroupe/evaluation/                     # ★ ディレクトリ全体が新規
+├── ★ micro_evaluation.py                  # ミクロ評価（LLM-as-a-judge / 8項目）
+├── ★ macro_evaluation.py                  # マクロ評価（協調過程・成果物 / 6項目）
+├── ★ process_metrics.py                   # プロセス指標（停滞率・発散カウント）
+├── ★ deliverables.py                      # 評価対象の成果物定義
+└── ★ complete_evaluation_pipeline.py      # 統合実行
+```
+
+### 評価シナリオ・ペルソナ・実行スクリプト
+
+```
+├── ★ Tutorial_participatory.py            # 参加型シミュレーション実行
+├── ★ run_autonomous_only.py               # 自律型条件の実行
+├── ★ micro_rubric_evaluation.py           # ミクロ評価実行
+├── ★ macro_rubric_evaluation.py           # マクロ評価実行
+├── ★ deliverables_rubric_evaluation.py    # 成果物評価実行
+├── ★ agent_specs/                         # 評価シナリオのペルソナ定義（PM / SE / AI Researcher）
+├── ★ evaluation_results/                  # 評価結果 JSON
+├── ★ simulation_results/                  # シミュレーションログ
+└── ★ rubric_results/                      # ルーブリック評価結果
+```
+
+### 探索的実装（報告書本論には含めなかった追加実装）
+
+設計検討・拡張可能性の検証として実装した試行的なコンポーネント。報告書では介入オプションとして MODIFY を不採用としているが、MODIFY 系の検証コードも残っている。
+
+- ★ `tinytroupe/agent/human_action_generator.py`, `human_controlled_person.py`, `human_corrector.py` — 人間が直接エージェントを操作する形式（MODIFY 系介入の検証用）
+- ★ `tinytroupe/agent/learnable_tiny_person.py`, `learnable_utils.py` — 学習可能エージェントの試作
+- ★ `refine_persona.py` — 参加型介入で得られたガイドラインを LLM で分析し、エージェントのペルソナ定義（JSON）に反映する試作
+- ★ `evaluate_refined.py` — 洗練後ペルソナの評価
+- ★ `try/` — 初期検討用のブレインストーミング素材
+
+### ベースフレームワーク（Microsoft TinyTroupe 由来）
+
+`tinytroupe/agent/tiny_person.py`、`tinytroupe/environment/`、`tinytroupe/extraction/`、`tinytroupe/factory/`、`tinytroupe/openai_utils.py`、`tinytroupe/steering/`、`tinytroupe/tools/`、`tinytroupe/validation/`、`examples/` などはオリジナルの [TinyTroupe](https://github.com/microsoft/TinyTroupe) に由来する。
+
+## 技術スタック
+
+- **言語**: Python
+- **モデル**: OpenAI API — `gpt-4o-mini`（シミュレーション・評価）、`o3-mini`（詳細推論）、`text-embedding-3-small`
+- **評価手法**: LLM-as-a-judge、ルーブリックベース評価、Evidence-Centered Design に基づく指標設計
+- **基盤フレームワーク**: Microsoft [TinyTroupe](https://github.com/microsoft/TinyTroupe)（MIT License）
+
+## セットアップと実行
 
 ```bash
+# 環境変数
 export OPENAI_API_KEY="your-api-key"
-```
 
-### 2. 実行例
-
-```bash
 # 参加型シミュレーション
 python Tutorial_participatory.py
 
-# 自律条件シミュレーション
+# 自律型シミュレーション
 python run_autonomous_only.py
 
-# ペルソナ洗練
-python refine_persona.py
+# 評価
+python micro_rubric_evaluation.py
+python macro_rubric_evaluation.py
 ```
 
-## 評価シナリオ
+モデル・トークン上限・キャッシュ等の設定は `config.ini` で管理する。
 
-オープンキャンパス向け「**Smart Lab Demo**」設計会議のシミュレーションを用いて評価しました。3名のエージェント（PM・Systems Engineer・AI Researcher）が、IoT・LLM・MCPを統合したデモの設計を議論します。
+## ライセンス
 
-自律条件と参加型条件でシミュレーションを複数回実行し、3層評価パイプラインにより比較分析を行いました。
-
-## ベースフレームワーク
-
-- [Microsoft TinyTroupe](https://github.com/microsoft/TinyTroupe) — LLM-powered multiagent persona simulation
+本リポジトリは Microsoft Corporation 製の [TinyTroupe](https://github.com/microsoft/TinyTroupe)（MIT License）を基盤とし、参加型機構・評価パイプラインを拡張したものである（`LICENSE` 参照）。
+本研究で新規追加した部分（★ 印のあるファイル）も同じく MIT License の下で公開する。
