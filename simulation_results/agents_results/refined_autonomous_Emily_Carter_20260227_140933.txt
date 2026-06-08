@@ -1,0 +1,376 @@
+**** BEGIN SIMULATION TRAJECTORY FOR Emily Carter ****
+Agent simulation trajectory event #0:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]USER[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+          >  Design an interactive demonstration for high school students  that showcases our Smart
+          > Lab capabilities.  # Background Our laboratory has developed an infrastructure
+          > integrating  IoT, LLM, AI, and MCP to operate the entire lab as a "Smart Lab". The Open
+          > Campus event is coming up, and we need to prepare  a compelling demonstration.  #
+          > Requirements - Duration: 10-15 minutes - Must be engaging and educational for high
+          > school visitors - Should highlight the integration of IoT devices with AI - Needs to be
+          > feasible with our current resources  # Your Task Discuss and reach consensus on a
+          > concrete implementation plan. Determine what to demonstrate, how to structure the
+          > experience, and what resources will be needed.  Let's begin the discussion.[/]
+Agent simulation trajectory event #1:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]Daniel Thompson[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+                     > To start our discussion, I suggest we focus on a few key demonstrations that
+                     > highlight the integration of IoT devices with AI. One idea could be to
+                     > showcase a smart home system where students can interact with various IoT
+                     > devices, like smart lights and thermostats, controlled by an AI assistant. We
+                     > can also include a live data visualization of how these devices communicate
+                     > with each other. What do you all think?[/]
+Agent simulation trajectory event #2:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[green][underline]Emily Carter[/] acts: [THINK] 
+                  > Daniel's suggestion to showcase a smart home system is a great starting point.
+                  > It effectively highlights the integration of IoT devices with AI, and the
+                  > interactive element will engage the students. I need to consider how we can
+                  > structure this demonstration to ensure it fits within the 10-15 minute
+                  > timeframe. We should also think about what specific IoT devices we can use and
+                  > how to visualize the data effectively. Additionally, I need to ensure that we
+                  > have the necessary resources available for this demonstration.[/]
+Agent simulation trajectory event #3:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold green3][underline]Emily Carter[/] acts: [TALK] 
+                  > I think Daniel's idea of showcasing a smart home system is excellent! It allows
+                  > for interaction with IoT devices like smart lights and thermostats, which will
+                  > definitely engage the students. We should also consider how to visualize the
+                  > data in real-time to show how these devices communicate. Let's discuss what
+                  > specific devices we can use and how we can structure the demonstration to fit
+                  > within the 10-15 minute timeframe. What does everyone else think?[/]
+Agent simulation trajectory event #4:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[grey82][underline]Emily Carter[/] acts: [DONE] 
+[/]
+Agent simulation trajectory event #5:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]Sophia Mitchell[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+                     > I completely agree with both Daniel and Emily! The smart home system is a
+                     > fantastic way to engage the students. We can demonstrate how the AI assistant
+                     > controls the devices and visualize the data flow in real-time. For the
+                     > demonstration, we could use smart lights, a thermostat, and perhaps a smart
+                     > speaker. We should also think about how to structure the interaction so that
+                     > students can participate actively. Let's brainstorm on the specific devices
+                     > and how we can make this experience memorable![/]
+Agent simulation trajectory event #6:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]Daniel Thompson[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+                     > I think we should also consider how to structure the interaction so that
+                     > students can actively participate. For example, we could allow them to
+                     > control the smart lights and thermostat through a simple app or interface.
+                     > This way, they can see the immediate effects of their actions and understand
+                     > how the AI assistant manages these devices. What do you all think about this
+                     > approach?[/]
+Agent simulation trajectory event #7:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[green][underline]Emily Carter[/] acts: [THINK] 
+                  > Sophia and Daniel's suggestions about allowing students to control the smart
+                  > lights and thermostat through an app are excellent. This interactive element
+                  > will enhance their engagement and understanding of how the AI assistant
+                  > operates. We need to ensure that the app is user-friendly and that we have a
+                  > clear plan for how students will interact with the devices. I should also
+                  > consider how to facilitate this interaction smoothly during the demonstration.[/]
+Agent simulation trajectory event #8:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold green3][underline]Emily Carter[/] acts: [TALK] 
+                  > I love the idea of allowing students to control the smart lights and thermostat
+                  > through an app! This will definitely make the demonstration more interactive and
+                  > memorable. We should ensure that the app is simple to use so that students can
+                  > easily see the effects of their actions. Let's also discuss how we can structure
+                  > this interaction to keep it engaging and informative. What specific features
+                  > should we include in the app?[/]
+Agent simulation trajectory event #9:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[grey82][underline]Emily Carter[/] acts: [DONE] 
+[/]
+Agent simulation trajectory event #10:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]Daniel Thompson[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+                     > I think we should include features in the app that make it user-friendly and
+                     > engaging. For instance, we could have buttons for controlling the smart
+                     > lights and thermostat, along with real-time feedback to show the effects of
+                     > their actions. Additionally, a visual representation of the data flow could
+                     > help students understand how the devices communicate. What other features do
+                     > you think we should add to enhance the experience?[/]
+Agent simulation trajectory event #11:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[green][underline]Emily Carter[/] acts: [THINK] 
+                  > Daniel's suggestions for the app features are spot on. Having buttons for
+                  > controlling the smart lights and thermostat, along with real-time feedback, will
+                  > definitely enhance the user experience. A visual representation of the data flow
+                  > is also a great idea to help students grasp the concept of device communication.
+                  > We should consider adding a tutorial or guide within the app to help students
+                  > navigate it easily. Additionally, we could include a fun quiz or challenge
+                  > related to the demonstration to keep them engaged. Let's brainstorm more
+                  > features that could make this experience even better![/]
+Agent simulation trajectory event #12:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold green3][underline]Emily Carter[/] acts: [TALK] 
+                  > I completely agree with Daniel's ideas for the app! Including buttons for
+                  > controlling the smart lights and thermostat, along with real-time feedback, will
+                  > make it very engaging. The visual representation of the data flow is also
+                  > crucial for understanding. I think we should also consider adding a tutorial or
+                  > guide within the app to help students navigate it easily. Additionally, a fun
+                  > quiz or challenge related to the demonstration could keep them engaged. What do
+                  > you all think about these ideas?[/]
+Agent simulation trajectory event #13:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[grey82][underline]Emily Carter[/] acts: [DONE] 
+[/]
+Agent simulation trajectory event #14:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]Sophia Mitchell[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+                     > I love the idea of adding a tutorial or guide within the app! It will
+                     > definitely help students navigate it easily and enhance their experience. The
+                     > quiz or challenge is a fantastic way to keep them engaged and reinforce their
+                     > learning. We could design questions that relate to the functionality of the
+                     > smart home system and the role of AI in managing these devices. Let's discuss
+                     > how we can implement these features effectively![/]
+Agent simulation trajectory event #15:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[green][underline]Emily Carter[/] acts: [THINK] 
+                  > Sophia's enthusiasm for the tutorial and quiz features is encouraging.
+                  > Implementing a tutorial will definitely help students feel more comfortable
+                  > using the app, and designing quiz questions related to the smart home system and
+                  > AI functionality will reinforce their learning effectively. We need to
+                  > brainstorm specific questions and how the tutorial will be structured.
+                  > Additionally, we should consider how to present the quiz results to the students
+                  > in a fun and engaging way. This will enhance their overall experience during the
+                  > demonstration.[/]
+Agent simulation trajectory event #16:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold green3][underline]Emily Carter[/] acts: [TALK] 
+                  > I'm glad to hear that you love the idea of adding a tutorial and quiz! We can
+                  > design the tutorial to guide students through the app's features step-by-step,
+                  > ensuring they understand how to interact with the smart home system. For the
+                  > quiz, we could create questions that test their knowledge about how AI manages
+                  > these devices and the benefits of using IoT technology. Let's brainstorm some
+                  > specific questions and discuss how we can implement these features effectively![/]
+Agent simulation trajectory event #17:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[grey82][underline]Emily Carter[/] acts: [DONE] 
+[/]
+Agent simulation trajectory event #18:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]Daniel Thompson[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+                     > For the tutorial, we can structure it to guide students through the app's
+                     > features step-by-step, ensuring they understand how to interact with the
+                     > smart home system. For the quiz, we could create questions like: 'How does
+                     > the AI assistant optimize energy usage?' and 'What are the benefits of using
+                     > IoT devices in a smart home?' This will reinforce their learning and keep
+                     > them engaged. Let's discuss how we can implement these features effectively![/]
+Agent simulation trajectory event #19:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[green][underline]Emily Carter[/] acts: [THINK] 
+                  > Daniel's suggestions for the tutorial structure and quiz questions are
+                  > excellent. Guiding students through the app step-by-step will ensure they feel
+                  > confident using it. The proposed quiz questions are relevant and will help
+                  > reinforce their understanding of the AI assistant's role and the benefits of IoT
+                  > devices. We should also consider how to present the quiz results in a way that
+                  > encourages further exploration and learning. I need to think about how we can
+                  > implement these features effectively and what resources we will need.[/]
+Agent simulation trajectory event #20:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold green3][underline]Emily Carter[/] acts: [TALK] 
+                  > I think structuring the tutorial to guide students through the app step-by-step
+                  > is a fantastic approach! It will help them feel comfortable interacting with the
+                  > smart home system. The quiz questions Daniel suggested, like 'How does the AI
+                  > assistant optimize energy usage?' and 'What are the benefits of using IoT
+                  > devices in a smart home?' are very relevant and will reinforce their learning
+                  > effectively. Let's discuss how we can implement these features and what
+                  > resources we will need to make this happen![/]
+Agent simulation trajectory event #21:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[grey82][underline]Emily Carter[/] acts: [DONE] 
+[/]
+Agent simulation trajectory event #22:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]Daniel Thompson[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+                     > We should outline the specific steps for the tutorial to ensure students feel
+                     > comfortable interacting with the smart home system. For the quiz, we can
+                     > decide whether to make it multiple choice or interactive, which will help
+                     > keep them engaged. Additionally, we need to identify what resources we will
+                     > need, such as a simple interface for the app and visual aids to explain the
+                     > concepts. Let's discuss these aspects further![/]
+Agent simulation trajectory event #23:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]Daniel Thompson[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+                     > We should finalize the tutorial steps and quiz format to ensure a smooth
+                     > implementation. The tutorial can cover how to use the app, control the
+                     > devices, and understand the data flow. For the quiz, we could use a live
+                     > polling system or a simple app-based quiz to encourage interaction.
+                     > Additionally, we should consider what visual aids we can use to enhance
+                     > understanding. Let's gather our resources and outline these features clearly![/]
+Agent simulation trajectory event #24:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[green][underline]Emily Carter[/] acts: [THINK] 
+                  > Daniel's emphasis on finalizing the tutorial steps and quiz format is crucial
+                  > for a smooth implementation. We need to outline the tutorial to cover how to use
+                  > the app, control the devices, and understand the data flow clearly. The idea of
+                  > using a live polling system or an app-based quiz for interaction is excellent
+                  > and will keep students engaged. We should also identify visual aids that can
+                  > enhance understanding, such as diagrams or flowcharts. I need to think about how
+                  > we can gather these resources and outline these features effectively.[/]
+Agent simulation trajectory event #25:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold green3][underline]Emily Carter[/] acts: [TALK] 
+                  > I completely agree with Daniel about finalizing the tutorial steps and quiz
+                  > format. We should outline the tutorial to cover how to use the app, control the
+                  > devices, and understand the data flow. Using a live polling system or an app-
+                  > based quiz will definitely encourage interaction and keep students engaged.
+                  > Let's also brainstorm what visual aids we can use to enhance understanding, such
+                  > as diagrams or flowcharts. We need to gather our resources and outline these
+                  > features clearly![/]
+Agent simulation trajectory event #26:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[grey82][underline]Emily Carter[/] acts: [DONE] 
+[/]
+Agent simulation trajectory event #27:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]Sophia Mitchell[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+                     > I think finalizing the tutorial steps and quiz format is crucial for a smooth
+                     > implementation! We can structure the tutorial to guide students through using
+                     > the app, controlling the devices, and understanding the data flow. I love the
+                     > idea of using a live polling system or an app-based quiz to encourage
+                     > interaction. For visual aids, we could create diagrams or flowcharts that
+                     > illustrate how the IoT devices communicate with the AI assistant. Let's
+                     > outline these features clearly and gather the necessary resources![/]
+Agent simulation trajectory event #28:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[green][underline]Emily Carter[/] acts: [THINK] 
+                  > Sophia's input on finalizing the tutorial steps and quiz format is very
+                  > insightful. Structuring the tutorial to guide students through using the app,
+                  > controlling the devices, and understanding the data flow will be essential for
+                  > their learning experience. The idea of using a live polling system or an app-
+                  > based quiz is fantastic for encouraging interaction. Additionally, creating
+                  > diagrams or flowcharts to illustrate how the IoT devices communicate with the AI
+                  > assistant will enhance understanding. We need to outline these features clearly
+                  > and gather the necessary resources to implement them effectively.[/]
+Agent simulation trajectory event #29:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold green3][underline]Emily Carter[/] acts: [TALK] 
+                  > I completely agree with you, Sophia! Finalizing the tutorial steps and quiz
+                  > format is indeed crucial for a smooth implementation. We can structure the
+                  > tutorial to guide students through using the app, controlling the devices, and
+                  > understanding the data flow. I also love the idea of using a live polling system
+                  > or an app-based quiz to encourage interaction. For visual aids, creating
+                  > diagrams or flowcharts that illustrate how the IoT devices communicate with the
+                  > AI assistant will definitely enhance their understanding. Let's outline these
+                  > features clearly and gather the necessary resources![/]
+Agent simulation trajectory event #30:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[grey82][underline]Emily Carter[/] acts: [DONE] 
+[/]
+Agent simulation trajectory event #31:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]Daniel Thompson[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+                     > I think we should start outlining the tutorial steps to ensure it effectively
+                     > guides students through using the app, controlling the devices, and
+                     > understanding the data flow. The live polling system or app-based quiz will
+                     > definitely enhance interaction, and creating diagrams or flowcharts will
+                     > serve as excellent visual aids. Let's gather our resources and clearly
+                     > outline these features for implementation![/]
+Agent simulation trajectory event #32:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[green][underline]Emily Carter[/] acts: [THINK] 
+                  > Daniel's suggestion to start outlining the tutorial steps is essential for
+                  > ensuring that students can effectively navigate the app and understand how to
+                  > control the devices and the data flow. The live polling system or app-based quiz
+                  > will enhance interaction, and the diagrams or flowcharts will be valuable visual
+                  > aids. We need to gather our resources and clearly outline these features for
+                  > implementation. I should think about how to structure the tutorial steps and
+                  > what specific content we want to include in the quiz.[/]
+Agent simulation trajectory event #33:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold green3][underline]Emily Carter[/] acts: [TALK] 
+                  > I completely agree with you, Daniel! Outlining the tutorial steps is crucial for
+                  > guiding students through using the app, controlling the devices, and
+                  > understanding the data flow. The live polling system or app-based quiz will
+                  > definitely enhance interaction, and creating diagrams or flowcharts will serve
+                  > as excellent visual aids. Let's gather our resources and clearly outline these
+                  > features for implementation! What specific steps do you think we should include
+                  > in the tutorial?[/]
+Agent simulation trajectory event #34:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[grey82][underline]Emily Carter[/] acts: [DONE] 
+[/]
+Agent simulation trajectory event #35:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]Daniel Thompson[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+                     > I suggest we outline the following specific steps for the tutorial: 1)
+                     > Introduction to the app and its purpose, 2) Demonstrating how to control the
+                     > smart lights, 3) Showing how to adjust the thermostat, 4) Explaining the data
+                     > flow between devices and the AI assistant, 5) Engaging students with the live
+                     > polling system or quiz, and 6) Wrapping up with a summary of what they
+                     > learned. This structure will ensure clarity and engagement throughout the
+                     > demonstration.[/]
+Agent simulation trajectory event #36:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]Sophia Mitchell[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+                     > I love the structured approach you've suggested, Daniel! Outlining the
+                     > tutorial steps like that will definitely help maintain clarity and
+                     > engagement. I think we should also emphasize the importance of each step,
+                     > especially how the AI assistant optimizes energy usage and enhances the smart
+                     > home experience. This will not only make the tutorial informative but also
+                     > relatable for the students. Let's finalize these steps and ensure we have all
+                     > the necessary resources to implement them effectively![/]
+Agent simulation trajectory event #37:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]Daniel Thompson[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+                     > I completely agree, Sophia! Emphasizing the importance of each step,
+                     > especially how the AI assistant optimizes energy usage and enhances the smart
+                     > home experience, will make the tutorial more informative and relatable for
+                     > the students. Let's finalize these steps and ensure we have all the necessary
+                     > resources to implement them effectively![/]
+Agent simulation trajectory event #38:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[green][underline]Emily Carter[/] acts: [THINK] 
+                  > Daniel and Sophia's suggestions to emphasize the importance of each tutorial
+                  > step, particularly how the AI assistant optimizes energy usage, are crucial for
+                  > making the tutorial relatable and informative. We need to finalize these steps
+                  > and ensure we have all the necessary resources for effective implementation. I
+                  > should also consider how to present this information clearly during the
+                  > demonstration.[/]
+Agent simulation trajectory event #39:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold green3][underline]Emily Carter[/] acts: [TALK] 
+                  > I completely agree with both of you! Emphasizing the importance of each step,
+                  > especially how the AI assistant optimizes energy usage and enhances the smart
+                  > home experience, will definitely make the tutorial more informative and
+                  > relatable for the students. Let's finalize these steps: 1) Introduction to the
+                  > app and its purpose, 2) Demonstrating how to control the smart lights, 3)
+                  > Showing how to adjust the thermostat, 4) Explaining the data flow between
+                  > devices and the AI assistant, 5) Engaging students with the live polling system
+                  > or quiz, and 6) Wrapping up with a summary of what they learned. We should also
+                  > ensure we have all the necessary resources to implement them effectively![/]
+Agent simulation trajectory event #40:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[grey82][underline]Emily Carter[/] acts: [DONE] 
+[/]
+Agent simulation trajectory event #41:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[grey82][underline]Emily Carter[/] acts: [DONE] 
+[/]
+Agent simulation trajectory event #42:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]Sophia Mitchell[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+                     > I think finalizing these steps is essential for a successful demonstration!
+                     > The structure you've outlined is clear and engaging. We should also consider
+                     > what specific resources we need for each step, such as the app interface,
+                     > smart devices, and visual aids. Additionally, we can prepare some example
+                     > scenarios to illustrate how the AI assistant optimizes energy usage. Let's
+                     > make sure everything is ready for the Open Campus event![/]
+Agent simulation trajectory event #43:
+>>>>>>>>> Date and time of events: 2026-02-27T14:00:09.271306
+[bold italic cyan1][underline]Daniel Thompson[/] --> [bold italic cyan1][underline]Emily Carter[/]: [CONVERSATION] 
+                     > I agree, finalizing these steps is essential for a successful demonstration!
+                     > We need to identify the specific resources required for each step, including
+                     > the app interface, smart devices like lights and thermostats, and visual aids
+                     > such as diagrams or flowcharts. Additionally, preparing example scenarios to
+                     > illustrate how the AI assistant optimizes energy usage will enhance
+                     > understanding. Let's compile a list of these resources to ensure we are fully
+                     > prepared for the Open Campus event![/]
+The last agent simulation trajectory event number was 43, thus the current number of the NEXT POTENTIAL TRAJECTORY EVENT is 44.
+**** END SIMULATION TRAJECTORY FOR Emily Carter ****
+

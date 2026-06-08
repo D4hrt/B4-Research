@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment / Secrets
+.env
+.env.*
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Generated slides
+*.pptx
+
+# Reference materials (not for public release)
+参考/
+
+# Cache
+*.pickle
+openai_api_cache.pickle
+
+# Byte-compiled
+*.egg-info/
+dist/
+build/

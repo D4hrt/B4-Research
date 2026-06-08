@@ -1,0 +1,26 @@
+{
+    "timestamp": "20260227_133813",
+    "condition": "autonomous",
+    "model": "gpt-4o",
+    "temperature": 0.3,
+    "transcripts_used": [
+        "autonomous_20260126_184509.txt"
+    ],
+    "agents": {
+        "Emily Carter": {
+            "original_path": "./agent_specs/pm_participatory.json",
+            "refined_path": "./agent_specs/refined_from_autonomous_20260227_133813/pm_participatory.json",
+            "warnings": []
+        },
+        "Daniel Thompson": {
+            "original_path": "./agent_specs/engineer_participatory.json",
+            "refined_path": "./agent_specs/refined_from_autonomous_20260227_133813/engineer_participatory.json",
+            "warnings": []
+        },
+        "Sophia Mitchell": {
+            "original_path": "./agent_specs/ai_researcher_participatory.json",
+            "refined_path": "./agent_specs/refined_from_autonomous_20260227_133813/ai_researcher_participatory.json",
+            "warnings": []
+        }
+    }
+}

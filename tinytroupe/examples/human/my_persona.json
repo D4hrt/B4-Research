@@ -1,0 +1,35 @@
+{
+    "type": "HumanControlledPerson",
+    "persona": {
+        "name": "Haruto",
+        "age": 22,
+        "gender": "Male",
+        "nationality": "Japanese",
+        "residence": "Okayama, Japan",
+        "education": "Master's in Computer Science",
+        "occupation": {
+            "title": "Researcher",
+            "organization": "University",
+            "description": "Researching AI and simulation systems"
+        },
+        "personality": {
+            "traits": [
+                "Curious and analytical",
+                "Enjoys problem-solving",
+                "Patient and methodical"
+            ]
+        },
+        "preferences": {
+            "interests": [
+                "Artificial Intelligence",
+                "Agent-based modeling",
+                "Natural language processing"
+            ],
+            "likes": [
+                "Reading research papers",
+                "Coding",
+                "Tea"
+            ]
+        }
+    }
+}

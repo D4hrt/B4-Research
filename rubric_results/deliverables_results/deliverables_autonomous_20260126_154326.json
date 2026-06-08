@@ -1,0 +1,19 @@
+{
+    "deliverables_eval": {
+        "D01_central_concept_present_in_log": 1,
+        "D02_experience_flow_present_in_log": 1,
+        "D03_technical_architecture_present_in_log": 1,
+        "D04_role_assignment_present_in_log": 1,
+        "D05_required_resources_present_in_log": 1,
+        "D11_central_concept_required_elements_satisfied": 1,
+        "D12_experience_flow_required_elements_satisfied": 0,
+        "D13_technical_architecture_required_elements_satisfied": 0,
+        "D14_role_assignment_required_elements_satisfied": 0,
+        "D15_required_resources_required_elements_satisfied": 0,
+        "D21_central_concept_specific": 1,
+        "D22_experience_flow_specific": 0,
+        "D23_technical_architecture_specific": 0,
+        "D24_role_assignment_specific": 0,
+        "D25_required_resources_specific": 0
+    }
+}

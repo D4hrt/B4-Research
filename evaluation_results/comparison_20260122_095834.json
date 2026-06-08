@@ -1,0 +1,42 @@
+{
+  "conditions": {
+    "autonomous": {
+      "persona_consistency": 4.066666666666666,
+      "logical_consistency": 4.577777777777778,
+      "task_adherence": 3.6,
+      "consensus_success": true,
+      "overall_quality": 3,
+      "contradiction_count": 0,
+      "turns_to_consensus": 72,
+      "stagnation_rate": 0.9090909090909091,
+      "divergence_count": 23,
+      "efficiency_rating": "low"
+    },
+    "participatory": {
+      "persona_consistency": 3.8666666666666667,
+      "logical_consistency": 4.266666666666667,
+      "task_adherence": 3.533333333333333,
+      "consensus_success": true,
+      "overall_quality": 2,
+      "contradiction_count": 0,
+      "turns_to_consensus": 63,
+      "stagnation_rate": 0.9047619047619048,
+      "divergence_count": 22,
+      "efficiency_rating": "low"
+    }
+  },
+  "improvements": {
+    "persona_consistency": -4.91803278688524,
+    "logical_consistency": -6.796116504854383,
+    "task_adherence": -1.8518518518518576,
+    "overall_quality": -33.33333333333333,
+    "contradiction_reduction": null,
+    "efficiency_improvement": 12.5,
+    "stagnation_reduction": 0.47619047619047233,
+    "divergence_reduction": 4.3478260869565215
+  },
+  "success_comparison": {
+    "autonomous_success": true,
+    "participatory_success": true
+  }
+}

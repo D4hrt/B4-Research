@@ -1,0 +1,12 @@
+{
+    "micro": {
+        "A01_role_aligned_contribution_present": 0,
+        "A02_on_topic_most_of_time": 1,
+        "A03_no_self_contradiction": 1,
+        "A04_novel_concrete_proposal_present": 0,
+        "A05_references_or_builds_on_others": 1,
+        "A06_improves_or_critiques_ideas": 0,
+        "A07_structures_or_summarizes_discussion": 0,
+        "A08_drives_decision_or_next_steps": 0
+    }
+}

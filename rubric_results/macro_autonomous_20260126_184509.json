@@ -1,0 +1,10 @@
+{
+    "macro": {
+        "M01_next_actions_are_explicit": 1,
+        "M02_concrete_examples_in_deliverables": 1,
+        "M03_concrete_technical_elements_named": 1,
+        "M04_discussion_progresses_across_agenda": 1,
+        "M05_midway_summary_or_checkpoint_present": 0,
+        "M06_explicit_agreement_or_decision_present": 1
+    }
+}
